@@ -77,3 +77,4 @@ C:\Users\twjbr\Documents\ASPRepos\TodoApp\obj\Debug\net9.0\refint\TodoApp.dll
 C:\Users\twjbr\Documents\ASPRepos\TodoApp\obj\Debug\net9.0\TodoApp.pdb
 C:\Users\twjbr\Documents\ASPRepos\TodoApp\obj\Debug\net9.0\TodoApp.genruntimeconfig.cache
 C:\Users\twjbr\Documents\ASPRepos\TodoApp\obj\Debug\net9.0\ref\TodoApp.dll
+c:\Users\twjbr\Documents\ASPRepos\TodoApp\obj\Debug\net9.0\TodoApp.sourcelink.json

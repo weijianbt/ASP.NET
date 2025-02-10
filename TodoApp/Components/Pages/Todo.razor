@@ -1,0 +1,53 @@
+﻿@page "/todo"
+@rendermode InteractiveServer
+
+<input @bind="userInput"/>
+<button @onclick="AddTodo">Add todo</button>
+
+<h3>Todo List</h3>
+<p>Total tasks: @todos.Count</p>
+<p>Completed tasks: @todos.Count(todo => todo.IsDone)</p>
+<p>Open tasks: @todos.Count(todo => !todo.IsDone)</p>
+
+<table border="black" style="width:100%">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+    </style>
+
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Is Done</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (TodoItem item in todos)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>
+                    <input type="checkbox" @bind="item.IsDone"/>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private string userInput = string.Empty;
+    private List<TodoItem> todos = new();
+    private void AddTodo()
+    {
+        TodoItem newTodo = new()
+        {
+            Title = userInput,
+            IsDone = false
+        };
+
+        todos.Add(newTodo);
+    }
+}

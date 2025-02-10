@@ -6,3 +6,16 @@
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+
+<p role="=status">Current Count:@(currentCount)</p>
+
+<input @bind="messageString" @bind:event="oninput"/>
+<p>Message: @(messageString)</p>
+
+@code
+{
+    private string messageString = "";
+    private int currentCount = 2;
+
+
+}
